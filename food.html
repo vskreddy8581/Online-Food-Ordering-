@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD HUB</title>
+    <link rel="stylesheet" href="food.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="brand">
+                <div class="brand-logo">🍽</div>
+                <div>
+                    <h1 class="ff">Food Hub</h1>
+                    <p class="pp">Fresh meals delivered fast</p>
+                </div>
+            </div>
+
+            <div class="header-act">
+                <div class="search">
+                    <input type="text" id="searchinput" placeholder="Search dishes, eg., pizza">
+                </div>
+                <!-- <p id="notfound">Food Not Available</p> -->
+                <button class="cart-btn" id="opencart" onclick="carts()">
+                    <span>Cart</span>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="cartitems">
+        <aside id="cartpannel">
+
+    <div class="cartheader">
+        <h2>Your Cart</h2>
+        <button id="closeCart" class="backbtn">✕</button>
+    </div>
+
+    <div class="cartItems"></div>
+
+    <div class="cart-footer">
+
+        <h3 id="total" class="total">
+            Total: ₹0
+        </h3>
+
+        <div class="footer-btns">
+            <button id="clear" class="clear-btn">
+                Clear All
+            </button>
+
+            <button id="pay" class="payment">
+                Pay Now
+            </button>
+        </div>
+
+    </div>
+
+</aside>
+    </div>
+
+    <main class="main">
+
+        <section class="hero">
+            <div class="hero-left">
+                <h2 class="hero-title1">Order your favourite meals - quick & fresh</h2>
+                <p class="h-title2">
+                    Curated menu with chef's specials, quick bites,
+                    wholesome meals and desserts.
+                </p>
+
+                <div class="hero-cta">
+                    <button class="btn-cta" onclick="document.getElementById('searchinput').focus()">🔎 Search
+                        menu</button>
+                    <button class="btn-cta">🍽 View menu</button>
+                </div>
+            </div>
+
+            <div class="hero-emoji">🚚</div>
+        </section>
+
+        <section class="main-menu">
+
+            <div class="menu">
+                <h3>Menu</h3>
+                <div class="menu1">
+                    Tap <strong>ADD</strong> to put items in cart
+                </div>
+            </div>
+            <p id="notfound">Food Not Available</p>
+            <div class="menu-grid" id="items">
+                <!-- Andhra Meals -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🍱</div>
+                        <div class="title-block">
+                            <h3>Andhra Meals</h3>
+                            <div class="contry">
+                                <span class="badge veg">VEG</span>
+                                <span class="badge kitchen">ANDHRA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Traditional Andhra full meals.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹180</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Gongura Chicken -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🍗</div>
+                        <div class="title-block">
+                            <h3>Gongura Chicken</h3>
+                            <div class="contry">
+                                <span class="badge nonveg">NON-VEG</span>
+                                <span class="badge kitchen">ANDHRA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Spicy chicken cooked with gongura leaves.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹260</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Pesarattu -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🥞</div>
+                        <div class="title-block">
+                            <h3>Pesarattu</h3>
+                            <div class="contry">
+                                <span class="badge veg">VEG</span>
+                                <span class="badge kitchen">ANDHRA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Green gram dosa with chutney.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹90</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Gutti Vankaya -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🍆</div>
+                        <div class="title-block">
+                            <h3>Gutti Vankaya</h3>
+                            <div class="contry">
+                                <span class="badge veg">VEG</span>
+                                <span class="badge kitchen">ANDHRA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Stuffed brinjal curry Andhra style.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹170</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Ulavacharu -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🥘</div>
+                        <div class="title-block">
+                            <h3>Ulavacharu</h3>
+                            <div class="contry">
+                                <span class="badge veg">VEG</span>
+                                <span class="badge kitchen">ANDHRA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Horse gram soup with rich flavor.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹140</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Royyala Vepudu -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🍤</div>
+                        <div class="title-block">
+                            <h3>Royyala Vepudu</h3>
+                            <div class="contry">
+                                <span class="badge nonveg">NON-VEG</span>
+                                <span class="badge kitchen">ANDHRA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Spicy Andhra prawn fry.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹320</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Ragi Sangati -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🍚</div>
+                        <div class="title-block">
+                            <h3>Ragi Sangati</h3>
+                            <div class="contry">
+                                <span class="badge veg">VEG</span>
+                                <span class="badge kitchen">ANDHRA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Healthy finger millet rice balls.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹110</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Andhra Fish Curry -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🐟</div>
+                        <div class="title-block">
+                            <h3>Fish Curry</h3>
+                            <div class="contry">
+                                <span class="badge nonveg">NON-VEG</span>
+                                <span class="badge kitchen">ANDHRA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Tangy spicy Andhra fish curry.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹280</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Punugulu -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🍢</div>
+                        <div class="title-block">
+                            <h3>Punugulu</h3>
+                            <div class="contry">
+                                <span class="badge veg">VEG</span>
+                                <span class="badge kitchen">ANDHRA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Crispy Andhra snack with chutney.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹80</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Bobbatlu -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🥮</div>
+                        <div class="title-block">
+                            <h3>Bobbatlu</h3>
+                            <div class="contry">
+                                <span class="badge veg">VEG</span>
+                                <span class="badge kitchen">SWEET</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Sweet stuffed Andhra flatbread.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹70</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+                <!-- Burger -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🍔</div>
+                        <div class="title-block">
+                            <h3>Cheese Burger</h3>
+                            <div class="contry">
+                                <span class="badge veg">VEG</span>
+                                <span class="badge kitchen">AMERICAN</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Grilled patty with cheese & veggies.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹199</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Biryani -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🍛</div>
+                        <div class="title-block">
+                            <h3>Chicken Biryani</h3>
+                            <div class="contry">
+                                <span class="badge nonveg">NON-VEG</span>
+                                <span class="badge kitchen">INDIAN</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Spicy basmati rice with chicken.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹249</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Noodles -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🍜</div>
+                        <div class="title-block">
+                            <h3>Hakka Noodles</h3>
+                            <div class="contry">
+                                <span class="badge veg">VEG</span>
+                                <span class="badge kitchen">CHINESE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Stir-fried noodles with veggies.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹179</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Dosa -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🥞</div>
+                        <div class="title-block">
+                            <h3>Masala Dosa</h3>
+                            <div class="contry">
+                                <span class="badge veg">VEG</span>
+                                <span class="badge kitchen">SOUTH INDIAN</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Crispy dosa with potato filling.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹99</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Momos -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🥟</div>
+                        <div class="title-block">
+                            <h3>Veg Momos</h3>
+                            <div class="contry">
+                                <span class="badge veg">VEG</span>
+                                <span class="badge kitchen">TIBETAN</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Steamed dumplings with chutney.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹119</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Fried Chicken -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🍗</div>
+                        <div class="title-block">
+                            <h3>Fried Chicken</h3>
+                            <div class="contry">
+                                <span class="badge nonveg">NON-VEG</span>
+                                <span class="badge kitchen">FAST FOOD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Crispy spicy fried chicken.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹229</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Salad -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🥗</div>
+                        <div class="title-block">
+                            <h3>Green Salad</h3>
+                            <div class="contry">
+                                <span class="badge veg">VEG</span>
+                                <span class="badge kitchen">HEALTHY</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Fresh veggies & lemon dressing.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹149</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+                <!-- Cake -->
+                <div class="card">
+                    <div class="card-top">
+                        <div class="emoji-wrap">🍰</div>
+                        <div class="title-block">
+                            <h3>Chocolate Cake</h3>
+                            <div class="contry">
+                                <span class="badge veg">VEG</span>
+                                <span class="badge kitchen">DESSERT</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">Soft layered chocolate cake.</div>
+                    <hr>
+                    <div class="card-bottom">
+                        <div class="price">₹159</div>
+                        <button class="add">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+    </main>
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h2>🍽 Rail Road Restaurant</h2>
+                <p>
+                    Delicious Andhra food delivered fast
+                    to your doorstep.
+                </p>
+            </div>
+
+
+
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p>📍 Andhra Pradesh</p>
+                <p>📞 +91 9998887776</p>
+                <p>✉ RailRoadRestaurant@gmail.com</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+            © 2026 Rail Road Restaurant | All Rights Reserved
+        </div>
+
+    </footer>
+    <script src="food.js"></script>
+</body>
+
+</html>
